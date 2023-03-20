@@ -3,6 +3,7 @@ import gzip
 import boto3
 import datetime
 from dotenv import load_dotenv
+from apscheduler.schedulers.background import BlockingScheduler
 load_dotenv("./key.env")
 
 def request_url(url):
@@ -180,5 +181,9 @@ def ETL_PIPELINE():
     print(f"ETL_PIPELINE END TIME : {datetime.datetime.now()}")
 
 # #main
-# if __name__=="__main__":
-#     ETL_PIPELINE()
+if __name__=="__main__":
+    scheduler = BlockingScheduler()
+    
+    scheduler.add_job(ETL_PIPELINE, 'interval', seconds = 300)
+
+    scheduler.start()
