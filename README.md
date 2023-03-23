@@ -23,6 +23,6 @@
 ## 수행 결과
 ![image](https://user-images.githubusercontent.com/48642518/227080143-44aa5158-9459-4823-86d8-cc44bab9d51b.png)
 
-## 개선 할 부분
+## 개선 할 부분(2023-03-22)
 1. 적재된 데이터를 가젹와서 복원
-2. aws athena를 이용하여 데이터 조
+2. aws athena를 이용하여 데이터 조회
