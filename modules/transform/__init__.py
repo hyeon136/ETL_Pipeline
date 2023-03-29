@@ -67,3 +67,13 @@ def str_to_datetime(string):
     import datetime
 
     return datetime.datetime.strptime(string, '%Y-%m-%dT%H:%M:%S.%fZ')
+
+def timestamp_to_datetime(timestamp):
+    import re
+    from datetime import datetime
+    
+    timestamp = str(datetime.fromtimestamp(timestamp))
+
+    time = re.sub("[^0-9]", "", timestamp)
+
+    return time[2:12]
