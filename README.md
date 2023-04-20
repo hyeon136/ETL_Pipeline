@@ -4,6 +4,8 @@
 2. 추출한 데이터를 복호화 및 전처리한 후 압축
 3. 압축한 데이터를 AWS S3에 dynamic partitioning 방식으로 업로드
 
+https://github.com/hyeon136/ETL_Pipeline/blob/main/ETL_pipeline/README.md
+
 ---
 ## Ver 2.0
 1. Airflow를 사용하여 일정 시간마다 추출, 변환, 적재가 실행되도록 스케줄링
