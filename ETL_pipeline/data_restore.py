@@ -17,7 +17,7 @@ def decrypt(data):
 
     #압축한 문자열 되돌리기
     data['user_id'] = b64.uuid_restore(data['user_id'])
-    data['inDate'] = restore.inDate_restore(data['inDate']) # datetime 변환 함수는 있으나 변환하지 않음
+    data['inDate'] = restore.inDate_restore(data['inDate']) # datetime 변환 함수는 만들었으나 변환하지 않음
     data['method'] = restore.method_restore(data['method'])
     data['url'] = restore.url_restore(data['url'])
 
