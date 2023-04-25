@@ -1,11 +1,13 @@
+# ETL_Pipeline Ver 1.5
+## 프로젝트 개요
+* ETL-Pipeline Ver 1.0에서 만든 파이프라인은 APScheduler를 사용하여 모니터링이 어려움
+* 이를 해결하기 위해 Airflow를 도입하여 DAG를 구성하여 스케줄링 실행
+
+---
 # ETL_Pipeline Ver 2.0
 ## 프로젝트 개요
-* ETL-Pipeline Ver 1.0에서 만든 파이프라인은 데이터의 양이 많아질수록 많은 시간을 소요하여 빠른 처리와 자동화를 위해 Airflow와 Pyspark를 이용하여 많은 양의 데이터를 수집과 처리, 적재를 자동화
+* ETL-Pipeline Ver 1.5에서 만든 파이프라인은 데이터의 양이 많아질수록 많은 시간을 소요하여 빠른 처리와 자동화를 위해 Airflow와 Pyspark를 이용하여 많은 양의 데이터를 수집과 처리, 적재를 자동화
 * spark는 싱글 노드로 사용
-
-ETL-Pipeline Ver 1.0에서 만든 파이프라인은 데이터의 양이 많아질수록 많은 시간을 소요하여 빠른 처리와 자동화를 위해 Airflow와 Pyspark를 이용하여 많은 양의 데이터를 수집과 처리,
-적재를 자동화
-
 
 ## 프로젝트 구조
 ![image](https://user-images.githubusercontent.com/48642518/233578199-b2ca34fe-56db-43d8-8a23-650b8ecb7a64.png)
