@@ -4,13 +4,19 @@
 * 이를 해결하기 위해 Airflow를 도입하여 DAG를 구성하여 스케줄링 실행
 
 ## 문제점
-* Airflow는 task가 독립적으로 실행되기 때문에 기본적으로는 서로 통신이 불가하여 추출한 데이터를 읽어와서 변환할 수 없음
+1. AWS Freetier t2.micro의 할당된 자원이 적어 Airflow Webserver는 작동하지만 Scheduler를 키면 멈추는 현상이 발생
+2. Airflow는 task가 독립적으로 실행되기 때문에 기본적으로는 서로 통신이 불가하여 추출한 데이터를 읽어와서 변환할 수 없음
 
-## 해결방안
+## 1. 해결방안
+* t3a.medium 인스턴스로 변경하여 수행
+
+## 2. 해결방안
 * XCom을 이용하여 task간의 메세지를 교환
 * XCom의 MAX Size는 48KB이므로 추출한 json 데이터를 전송하기 어려워 추출한 데이터를 임시로 json 파일로 저장
 * 저장한 파일명을 XCom을 이용하여 Transform task로 전달하여 저장한 json 데이터를 읽도록 수행
-* Tranform task에서도 위와 동일하게 압축하여 저장한 파일명을 Load task로 
+* Tranform task에서도 위와 동일하게 압축하여 저장한 파일명을 Load task로 전달
+
+
 
 ---
 # ETL_Pipeline Ver 2.0
